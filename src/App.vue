@@ -1,11 +1,15 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <el-container id="app" style="font-family: monospace;">
+    <el-header>
+      <el-menu class="el-menu-demo" mode="horizontal" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+        <el-menu-item index="1">nosce te ipsum</el-menu-item>
+        <el-menu-item index="4"><router-link to="/numbers">Numbers</router-link></el-menu-item>
+      </el-menu>
+    </el-header>
+    <el-main>
+      <router-view/>
+    </el-main>
+  </el-container>
 </template>
 
 <style lang="scss">
@@ -27,3 +31,8 @@
   }
 }
 </style>
+<script>
+export default {
+
+};
+</script>
